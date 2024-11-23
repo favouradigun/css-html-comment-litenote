@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .search-box {
+    padding: 8px 16px;
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .comment-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e1e1e1;
+  }
+
+  .input-box {
+    flex-grow: 1;
+    display: flex;
+    gap: 12px;
+  }
+
+  .comment-field {
+    flex-grow: 1;
+    padding: 8px 16px;
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+  }
+
+  .post-button {
+    padding: 8px 24px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .post-button:hover {
+    background-color: #ff5252;
+  }
+
+  .comment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #f8f9fe;
+    border-radius: 8px;
+  }
+
+  .comment-content {
+    flex-grow: 1;
+  }
+
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .user-name {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .timestamp {
+    color: #666;
+    font-size: 14px;
+  }
+
+  .comment-text {
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .like-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .like-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+    padding: 4px;
+    transition: color 0.2s;
+  }
+
+  .like-button:hover {
+    color: #ff6b6b;
+  }
+
+  .like-count {
+    color: #666;
+    font-size: 14px;
+  }
+
+  .more-comments {
+    color: #666;
+    font-size: 14px;
+    margin-top: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .more-comments:hover {
+    color: #333;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Comment</h1>
+      <input type="text" class="search-box" placeholder="Search">
+    </div>
+
+    <div class="comment-input">
+      <img src="29.jpg" alt="User profile" class="profile-pic">
+      <div class="input-box">
+        <input type="text" class="comment-field" placeholder="Add a comment">
+        <button class="post-button">Post</button>
+      </div>
+    </div>
+
+    <div class="comment">
+      <img src="29.jpg" alt="Ralph Edwards profile" class="profile-pic">
+      <div class="comment-content">
+        <div class="comment-header">
+          <span class="user-name">Ralph Edwards</span>
+          <span class="timestamp">Aug 19, 2021</span>
+        </div>
+        <p class="comment-text">
+          In mauris porttitor tincidunt mauris massa sit lorem sed scelerisque. 
+          Fringilla pharetra vel massa enim sollicitudin cras. At pulvinar eget sociis 
+          adipiscing eget donec ultricies nibh tristique.
+        </p>
+        <div class="like-section">
+          <button class="like-button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+            </svg>
+          </button>
+          <span class="like-count">5</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment">
+      <img src="/29.jpg" alt="Ralph Edwards profile" class="profile-pic">
+      <div class="comment-content">
+        <div class="comment-header">
+          <span class="user-name">Ralph Edwards</span>
+          <span class="timestamp">Aug 19, 2021</span>
+        </div>
+        <p class="comment-text">
+          In mauris porttitor tincidunt mauris massa sit lorem sed scelerisque. 
+          Fringilla pharetra vel massa enim sollicitudin cras. At pulvinar eget sociis 
+          adipiscing eget donec ultricies nibh tristique.
+        </p>
+        <div class="like-section">
+          <button class="like-button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+            </svg>
+          </button>
+          <span class="like-count">3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-comments">See 10 more comments</div>
+  </div>
+</body>
+</html>
